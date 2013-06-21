@@ -25,7 +25,7 @@
 				<version>2.3</version>
 				<configuration>
 					<descriptors>
-						<descriptor>src/main/assembly/assembly-config.xml</descriptor>
+						<descriptor>src/main/assembly/assembly-conf.xml</descriptor>
 					</descriptors>
 				</configuration>
 				<executions>
