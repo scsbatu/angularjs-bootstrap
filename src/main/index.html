@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css"               href="assets/css/boundry.css"  />
+<link rel="stylesheet" type="text/css" media="screen" href="lib/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="lib/css/bootstrap-responsive.css" />
+
+</head>
+
+<div class="container-fluid">
+	<script data-main="assets/js/boundry-main" src="lib/js/require.js"></script>
+	<div id="boundryapp" ng-view>Loading...</div>
+
+</div>
+
+<script>
+	define('config', [], function() {
+		return {
+			resourceLocation : 'http://localhost:7776/',
+			boundryServerPath : 'http://xxxxxxxxxxxxxx.com/'
+		};
+	});
+</script>
+

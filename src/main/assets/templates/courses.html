@@ -1,0 +1,21 @@
+<!-- <div ng-include src="'assets/templates/navbar.html'"></div> -->
+<navbar menu="menu"></navbar>
+<div class="hero-unit">
+<h1>Courses</h1>
+<p>Click your course below to get started!</p>
+</div>
+
+
+<div class="row-fluid">
+<div class="span10">
+  <h2>Getting Started</h2>
+  <p>This page is the place to come to help you get started  with your course.</p>
+<div>
+  <ul>
+		<li ng-repeat="course in courses"><a href="#/courses/{{course.id}}">{{course.title}}</a></li>
+		<a ng-href="#/dispatch">Dispatch File</a>
+	</ul>
+</div>
+  
+</div><!--/span-->
+</div><!--/row-->

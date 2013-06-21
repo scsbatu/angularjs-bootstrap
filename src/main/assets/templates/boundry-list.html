@@ -1,0 +1,59 @@
+<script type="text/javascript">
+	var sortingOrder = 'name';
+</script>
+
+<boundry-navbar menu="menu"></boundry-navbar>
+
+<div class="container" ng-controller="searchCtrl">
+	<h3>{{pageName}}</h3>
+	<h4>{{errorMessage}}</h4>
+
+	<div class="input-append" >
+		<input type="text" ng-model="query" ng-change="search()" class="input-block-level search-query" placeholder="Search"> 
+        <span><button class="btn btn-inverse btn-small" ng-click="searchButton()"><i class="icon-search"></i>Find</button></span>
+	</div>
+
+	<table class="table table-striped table-condensed table-hover">
+		<thead>
+			<tr>
+				<th class="id">Id&nbsp;<a ng-click="sort_by('id')"><i
+						class="icon-sort"></i></a></th>
+				<th class="name">Name&nbsp;<a
+					ng-click="sort_by('name')"><i class="icon-sort"></i></a></th>
+				<th class="address">Address&nbsp;<a
+					ng-click="sort_by('address')"><i class="icon-sort"></i></a></th>
+			</tr>
+		</thead>
+		<tfoot>
+			<td colspan="6">
+				<div class="pagination pull-right">
+					<ul>
+						<li ng-class="{disabled: currentPage == 0}"><a href
+							ng-click="prevPage()">« Prev</a></li>
+						<li ng-repeat="n in range(pagedItems.length)"
+							ng-class="{active: n == currentPage}" ng-click="setPage()">
+							<a ng-href ng-bind="n + 1">1</a>
+						</li>
+						<li ng-class="{disabled: currentPage == pagedItems.length - 1}">
+							<a ng-href ng-click="nextPage()">Next »</a>
+						</li>
+					</ul>
+				</div>
+			</td>
+		</tfoot>
+		<tbody>
+			<tr
+				ng-repeat="item in pagedItems[currentPage] | orderBy:sortingOrder:reverse">
+				<td>{{item.id}}</td>
+				<td>{{item.name}}</td>
+				<td>{{item.address}}</td>
+		</tbody>
+	</table>
+
+</div>
+
+
+<link href="../lib/css/bootstrap-combined.min.css" type="text/css" rel="stylesheet">
+<link href="../lib/css/bootstrap.no-icons.min.css" rel="stylesheet">
+<link href="../lib/css/font-awesome.css" type="text/css" rel="stylesheet">
+
