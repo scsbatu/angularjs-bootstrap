@@ -10,6 +10,9 @@ How to use
 ----------
 This will describe how to develop and add new componants
 
+How to add a new componant
+--------------------------
+
 TODO
 
 
