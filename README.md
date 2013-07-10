@@ -16,6 +16,6 @@ How to add a new componant
 TODO
 
 
-http://responsiveslides.com/
+
 
 
